@@ -23,7 +23,7 @@ class TourismSeasonsChartHeatmapMixin:
         )
         mask = np.isnan(matrix)
 
-        figure, axis = plt.subplots(figsize=(9, 16))
+        figure, axis = plt.subplots(figsize=(9, 9))
         sns.heatmap(
             matrix,
             cmap="Reds",

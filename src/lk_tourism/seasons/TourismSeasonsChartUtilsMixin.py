@@ -9,9 +9,7 @@ class TourismSeasonsChartUtilsMixin:
         return f"{int(round(total_arrivals / 1000.0))}K"
 
     def _format_country_label(self, country, annual_totals):
-        return (
-            f"{country} ({self._format_arrivals_k(annual_totals[country])})"
-        )
+        return f"{country} ({self._format_arrivals_k(annual_totals[country])})"
 
     def _cluster_total_arrivals(self, cluster_result, cluster_id):
         for row in cluster_result.get("summary", []):
@@ -52,9 +50,7 @@ class TourismSeasonsChartUtilsMixin:
         red, green, blue = self._cluster_palette(k)[cluster_id]
         return f"rgb({int(red * 255)}, {int(green * 255)}, {int(blue * 255)})"
 
-    def _add_source_footer(
-        self, figure, include_filter=True, year_label=None
-    ):
+    def _add_source_footer(self, figure, include_filter=True, year_label=None):
         filter_text = "All countries included"
         if include_filter:
             filter_text = (

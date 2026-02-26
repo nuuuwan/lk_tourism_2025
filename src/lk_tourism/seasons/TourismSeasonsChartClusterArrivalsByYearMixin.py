@@ -16,7 +16,7 @@ class TourismSeasonsChartClusterArrivalsByYearMixin:
 
         k = yearly_cluster_results[years[0]]["k"]
         palette = self._cluster_palette(k)
-        figure, axis = plt.subplots(figsize=(16, 9))
+        figure, axis = plt.subplots(figsize=(12, 6.75))
         self._plot_cluster_arrivals_bars(
             axis,
             yearly_cluster_results,

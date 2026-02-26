@@ -38,7 +38,7 @@ class TourismSeasonsChartTotalArrivalsByMonthMixin:
         monthly_shares = self._monthly_shares(monthly_totals)
 
         x_positions = np.arange(len(self.months))
-        figure, axis = plt.subplots(figsize=(16, 9))
+        figure, axis = plt.subplots(figsize=(12, 6.75))
         axis.fill_between(
             x_positions,
             monthly_shares,

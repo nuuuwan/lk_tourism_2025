@@ -23,7 +23,7 @@ class TourismSeasonsChartClusterShapesMixin:
         cluster_color = self._cluster_palette(cluster_result["k"])[cluster_id]
         centroid = cluster_result["centroids"][cluster_id]
 
-        figure, axis = plt.subplots(figsize=(16, 9))
+        figure, axis = plt.subplots(figsize=(12, 6.75))
         self._plot_cluster_country_lines(
             axis,
             countries,

@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 
 class TourismSeasonsChartClusterShapesMixin:
-    def _plot_country_shapes_for_cluster(
+    def _plot_cluster_seasons_for_cluster(
         self,
         shape_vectors,
         annual_totals,
@@ -47,13 +47,13 @@ class TourismSeasonsChartClusterShapesMixin:
         self, shape_vectors, annual_totals, cluster_result
     ):
         for cluster_id in range(cluster_result["k"]):
-            self._plot_country_shapes_for_cluster(
+            self._plot_cluster_seasons_for_cluster(
                 shape_vectors,
                 annual_totals,
                 cluster_result,
                 cluster_id,
                 os.path.join(
                     self.images_dir,
-                    f"country-shapes-by-cluster-{cluster_id}.png",
+                    f"cluster-seasons-by-cluster-{cluster_id}.png",
                 ),
             )

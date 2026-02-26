@@ -47,5 +47,5 @@ class TourismSeasonsChartHeatmapMixin:
             shape_vectors,
             annual_totals,
             cluster_result,
-            os.path.join(self.images_dir, "country-shapes-heatmap.png"),
+            os.path.join(self.images_dir, "cluster-seasons-heatmap.png"),
         )

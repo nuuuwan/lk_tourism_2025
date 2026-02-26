@@ -12,7 +12,10 @@ class TourismSeasonsChartHeatmapCoreMixin:
         k,
     ):
         warnings.warn(
-            "Heatmap chart helpers are deprecated and will be removed in a future release.",
+            (
+                "Heatmap chart helpers are deprecated and will be removed "
+                "in a future release."
+            ),
             DeprecationWarning,
             stacklevel=2,
         )
@@ -42,7 +45,10 @@ class TourismSeasonsChartHeatmapCoreMixin:
 
     def _apply_heatmap_axis_format(self, axis, break_lines):
         warnings.warn(
-            "Heatmap chart helpers are deprecated and will be removed in a future release.",
+            (
+                "Heatmap chart helpers are deprecated and will be removed "
+                "in a future release."
+            ),
             DeprecationWarning,
             stacklevel=2,
         )

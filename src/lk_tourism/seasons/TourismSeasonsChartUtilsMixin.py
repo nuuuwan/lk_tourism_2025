@@ -8,8 +8,27 @@ class TourismSeasonsChartUtilsMixin:
     def _format_arrivals_k(self, total_arrivals):
         return f"{int(round(total_arrivals / 1000.0))}K"
 
+    def _format_pct(self, ratio):
+        return f"{ratio * 100:.1f}%"
+
+    def _safe_share(self, numerator, denominator):
+        if not denominator:
+            return 0.0
+        return float(numerator) / float(denominator)
+
+    def _total_arrivals(self, annual_totals):
+        return sum(float(value) for value in annual_totals.values())
+
+    def _cluster_total_arrivals_all(self, cluster_result):
+        return sum(
+            float(row.get("total_arrivals", 0))
+            for row in cluster_result.get("summary", [])
+        )
+
     def _format_country_label(self, country, annual_totals):
-        return f"{country} ({self._format_arrivals_k(annual_totals[country])})"
+        total_arrivals = self._total_arrivals(annual_totals)
+        share = self._safe_share(annual_totals[country], total_arrivals)
+        return f"{country} ({self._format_pct(share)})"
 
     def _cluster_total_arrivals(self, cluster_result, cluster_id):
         for row in cluster_result.get("summary", []):
@@ -19,7 +38,9 @@ class TourismSeasonsChartUtilsMixin:
 
     def _cluster_label(self, cluster_result, cluster_id):
         arrivals = self._cluster_total_arrivals(cluster_result, cluster_id)
-        return f"Cluster {cluster_id} ({self._format_arrivals_k(arrivals)})"
+        total_arrivals = self._cluster_total_arrivals_all(cluster_result)
+        share = self._safe_share(arrivals, total_arrivals)
+        return f"Cluster {cluster_id} ({self._format_pct(share)})"
 
     def _cluster_countries_by_arrivals(
         self,

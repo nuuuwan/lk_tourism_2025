@@ -11,8 +11,12 @@ class TourismSeasonsChartWorldMapCoreMixin:
         cluster_color,
     ):
         cluster_name = self._cluster_label(cluster_result, cluster_id)
-        cluster_arrivals_k = self._format_arrivals_k(
-            self._cluster_total_arrivals(cluster_result, cluster_id)
+        cluster_arrivals = self._cluster_total_arrivals(
+            cluster_result, cluster_id
+        )
+        total_arrivals = self._cluster_total_arrivals_all(cluster_result)
+        cluster_share = self._format_pct(
+            self._safe_share(cluster_arrivals, total_arrivals)
         )
         fig.add_trace(
             go.Choropleth(
@@ -30,7 +34,7 @@ class TourismSeasonsChartWorldMapCoreMixin:
                 marker_line_width=0.5,
                 hovertemplate=(
                     "<b>%{location}</b><br>Cluster "
-                    f"{cluster_id} ({cluster_arrivals_k})"
+                    f"{cluster_id} ({cluster_share})"
                     "<extra></extra>"
                 ),
             )

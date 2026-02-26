@@ -16,7 +16,10 @@ class TourismSeasonsChartHeatmapMixin:
         output_path,
     ):
         warnings.warn(
-            "Heatmap chart generation is deprecated and will be removed in a future release.",
+            (
+                "Heatmap chart generation is deprecated and will be "
+                "removed in a future release."
+            ),
             DeprecationWarning,
             stacklevel=2,
         )
@@ -50,7 +53,10 @@ class TourismSeasonsChartHeatmapMixin:
 
     def save_chart_heatmap(self, shape_vectors, annual_totals, cluster_result):
         warnings.warn(
-            "save_chart_heatmap is deprecated and no longer used by the default workflow.",
+            (
+                "save_chart_heatmap is deprecated and no longer used by "
+                "the default workflow."
+            ),
             DeprecationWarning,
             stacklevel=2,
         )

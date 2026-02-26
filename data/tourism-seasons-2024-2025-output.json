@@ -5,61 +5,75 @@
       "Australia": 0,
       "Austria": 1,
       "Bangladesh": 0,
-      "Belgium": 1,
+      "Belgium": 2,
       "Canada": 1,
       "China": 1,
-      "Czech Republic": 2,
+      "Czech Republic": 3,
       "Denmark": 1,
       "France": 1,
       "Germany": 1,
       "India": 0,
       "Israel": 1,
-      "Italy": 1,
+      "Italy": 2,
       "Japan": 0,
       "Malaysia": 0,
       "Maldives": 0,
-      "Netherlands": 1,
+      "Netherlands": 2,
       "New Zealand": 0,
       "Norway": 1,
       "Pakistan": 0,
-      "Poland": 2,
-      "Russian Federation": 2,
+      "Poland": 3,
+      "Russian Federation": 3,
       "Singapore": 0,
       "South Korea": 1,
-      "Spain": 0,
-      "Sweden": 2,
+      "Spain": 2,
+      "Sweden": 3,
       "Switzerland": 1,
       "United Kingdom": 1,
       "United States": 1
     },
     "centroids": [
       [
-        0.07768901712396892,
-        0.07101306746036909,
-        0.0743550702948436,
-        0.07191348098132061,
-        0.07870345410524737,
-        0.0764174076642356,
-        0.08512532975398819,
-        0.08947743172070698,
-        0.0858398354591892,
-        0.08358477365413586,
-        0.09103657860213435,
-        0.11484455317986024
+        0.07888087952373513,
+        0.07192739667014655,
+        0.07500178135195788,
+        0.07238956761848606,
+        0.08108714112295119,
+        0.0777277401278782,
+        0.0831718131940327,
+        0.08386082052012862,
+        0.08466357288867302,
+        0.08349866676428692,
+        0.09059400406736583,
+        0.11719661615035787
       ],
       [
-        0.10399790729216356,
-        0.11138448450582858,
-        0.10567625018410114,
-        0.07551443902460471,
-        0.049120381259713394,
-        0.05233528169122448,
-        0.11293313226924709,
-        0.09547155170329272,
-        0.05858317964094233,
-        0.05991090604137494,
-        0.0764844047103512,
-        0.09858808167715585
+        0.10577594587435153,
+        0.11546631786143864,
+        0.11061701262010776,
+        0.0767333477823871,
+        0.05174535697401325,
+        0.053804347137249534,
+        0.10269601599028617,
+        0.08660369921125911,
+        0.0575427229368589,
+        0.0618831426438473,
+        0.07835823260188167,
+        0.098773858366319
+      ],
+      [
+        0.08300067555118835,
+        0.07690229073266597,
+        0.0706227353681754,
+        0.06644353006202788,
+        0.03283178775409937,
+        0.04527114168150832,
+        0.16454277467297182,
+        0.1632776515384143,
+        0.07617760854879323,
+        0.05686298593625253,
+        0.07323589019222503,
+        0.09083092796167783
       ],
       [
         0.1657300046787586,
@@ -86,20 +100,16 @@
         "Maldives",
         "New Zealand",
         "Pakistan",
-        "Singapore",
-        "Spain"
+        "Singapore"
       ],
       "1": [
         "Austria",
-        "Belgium",
         "Canada",
         "China",
         "Denmark",
         "France",
         "Germany",
         "Israel",
-        "Italy",
-        "Netherlands",
         "Norway",
         "South Korea",
         "Switzerland",
@@ -107,16 +117,22 @@
         "United States"
       ],
       "2": [
+        "Belgium",
+        "Italy",
+        "Netherlands",
+        "Spain"
+      ],
+      "3": [
         "Czech Republic",
         "Poland",
         "Russian Federation",
         "Sweden"
       ]
     },
-    "k": 3,
+    "k": 4,
     "summary": [
       {
-        "average_arrivals": 161370.3,
+        "average_arrivals": 169970.77777777778,
         "cluster": 0,
         "countries": [
           "Australia",
@@ -127,38 +143,46 @@
           "Maldives",
           "New Zealand",
           "Pakistan",
-          "Singapore",
-          "Spain"
+          "Singapore"
         ],
-        "num_countries": 10,
-        "total_arrivals": 1613703
+        "num_countries": 9,
+        "total_arrivals": 1529737
       },
       {
-        "average_arrivals": 121310.13333333333,
+        "average_arrivals": 131496.5,
         "cluster": 1,
         "countries": [
           "Austria",
-          "Belgium",
           "Canada",
           "China",
           "Denmark",
           "France",
           "Germany",
           "Israel",
-          "Italy",
-          "Netherlands",
           "Norway",
           "South Korea",
           "Switzerland",
           "United Kingdom",
           "United States"
         ],
-        "num_countries": 15,
-        "total_arrivals": 1819652
+        "num_countries": 12,
+        "total_arrivals": 1577958
+      },
+      {
+        "average_arrivals": 81415.0,
+        "cluster": 2,
+        "countries": [
+          "Belgium",
+          "Italy",
+          "Netherlands",
+          "Spain"
+        ],
+        "num_countries": 4,
+        "total_arrivals": 325660
       },
       {
         "average_arrivals": 137322.75,
-        "cluster": 2,
+        "cluster": 3,
         "countries": [
           "Czech Republic",
           "Poland",
@@ -588,64 +612,78 @@
         "Australia": 0,
         "Austria": 1,
         "Bangladesh": 0,
-        "Belarus": 2,
+        "Belarus": 3,
         "Belgium": 1,
         "Canada": 1,
         "China": 1,
-        "Czech Republic": 2,
+        "Czech Republic": 3,
         "Denmark": 1,
         "France": 1,
         "Germany": 1,
         "India": 0,
         "Iran": 1,
         "Israel": 1,
-        "Italy": 1,
+        "Italy": 2,
         "Japan": 0,
-        "Kazakhstan": 2,
+        "Kazakhstan": 3,
         "Malaysia": 1,
         "Maldives": 0,
         "Netherlands": 1,
         "New Zealand": 0,
         "Norway": 1,
         "Pakistan": 0,
-        "Poland": 2,
-        "Russian Federation": 2,
+        "Poland": 3,
+        "Russian Federation": 3,
         "Singapore": 0,
         "South Korea": 0,
-        "Spain": 0,
-        "Sweden": 2,
+        "Spain": 2,
+        "Sweden": 3,
         "Switzerland": 1,
         "United Kingdom": 1,
         "United States": 1
       },
       "centroids": [
         [
-          0.07672248011777882,
-          0.07068983734969464,
-          0.07446552222089167,
-          0.066667605891759,
-          0.07702678904769619,
-          0.07367234663041258,
-          0.09495706567296652,
-          0.08751840294165299,
-          0.07638717675981431,
-          0.08300166947260162,
-          0.09255358866167468,
-          0.12633751523305697
+          0.07807083737053061,
+          0.07165001927436124,
+          0.07464163827605351,
+          0.06720724180169882,
+          0.0793374382513466,
+          0.07473391707113058,
+          0.09403060381587701,
+          0.08165036159892362,
+          0.07449875498045029,
+          0.08254040546111863,
+          0.09233832978357645,
+          0.12930045231493265
         ],
         [
-          0.09602465536743947,
-          0.11261368966056337,
-          0.1130378704972457,
-          0.07636634510157349,
-          0.05061546455273637,
-          0.051831679526204946,
-          0.11320570356541812,
-          0.09517399461094915,
-          0.059891115423169244,
-          0.058439244429321587,
-          0.07388678395056052,
-          0.09891345331481806
+          0.0963037910113414,
+          0.11401546914532311,
+          0.11529193229572078,
+          0.07722180983466133,
+          0.051757512905992877,
+          0.0520895617556722,
+          0.1141105121131661,
+          0.08807355122635506,
+          0.060391986073197526,
+          0.05943915024368295,
+          0.07463640049422343,
+          0.09666832290066325
+        ],
+        [
+          0.07162336730299987,
+          0.06824379868731814,
+          0.06795673108289729,
+          0.057557054686378645,
+          0.031042446859871866,
+          0.05053694690554171,
+          0.10248313477824027,
+          0.21984159087646954,
+          0.07917846471025744,
+          0.0637942508187951,
+          0.07688192387489072,
+          0.11086028941633938
         ],
         [
           0.16624763777304685,
@@ -672,8 +710,7 @@
           "New Zealand",
           "Pakistan",
           "Singapore",
-          "South Korea",
-          "Spain"
+          "South Korea"
         ],
         "1": [
           "Austria",
@@ -685,7 +722,6 @@
           "Germany",
           "Iran",
           "Israel",
-          "Italy",
           "Malaysia",
           "Netherlands",
           "Norway",
@@ -694,6 +730,10 @@
           "United States"
         ],
         "2": [
+          "Italy",
+          "Spain"
+        ],
+        "3": [
           "Belarus",
           "Czech Republic",
           "Kazakhstan",
@@ -702,10 +742,10 @@
           "Sweden"
         ]
       },
-      "k": 3,
+      "k": 4,
       "summary": [
         {
-          "average_arrivals": 70980.5,
+          "average_arrivals": 74653.0,
           "cluster": 0,
           "countries": [
             "Australia",
@@ -716,14 +756,13 @@
             "New Zealand",
             "Pakistan",
             "Singapore",
-            "South Korea",
-            "Spain"
+            "South Korea"
           ],
-          "num_countries": 10,
-          "total_arrivals": 709805
+          "num_countries": 9,
+          "total_arrivals": 671877
         },
         {
-          "average_arrivals": 54369.5,
+          "average_arrivals": 55413.53333333333,
           "cluster": 1,
           "countries": [
             "Austria",
@@ -735,7 +774,6 @@
             "Germany",
             "Iran",
             "Israel",
-            "Italy",
             "Malaysia",
             "Netherlands",
             "Norway",
@@ -743,12 +781,22 @@
             "United Kingdom",
             "United States"
           ],
-          "num_countries": 16,
-          "total_arrivals": 869912
+          "num_countries": 15,
+          "total_arrivals": 831203
+        },
+        {
+          "average_arrivals": 38318.5,
+          "cluster": 2,
+          "countries": [
+            "Italy",
+            "Spain"
+          ],
+          "num_countries": 2,
+          "total_arrivals": 76637
         },
         {
           "average_arrivals": 50182.166666666664,
-          "cluster": 2,
+          "cluster": 3,
           "countries": [
             "Belarus",
             "Czech Republic",
@@ -770,13 +818,13 @@
         "Belgium": 1,
         "Canada": 1,
         "China": 1,
-        "Czech Republic": 2,
+        "Czech Republic": 3,
         "Denmark": 1,
         "France": 1,
         "Germany": 1,
         "India": 0,
         "Israel": 1,
-        "Italy": 1,
+        "Italy": 2,
         "Japan": 0,
         "Malaysia": 0,
         "Maldives": 0,
@@ -784,44 +832,58 @@
         "New Zealand": 0,
         "Norway": 1,
         "Pakistan": 0,
-        "Poland": 2,
-        "Russian Federation": 2,
+        "Poland": 3,
+        "Russian Federation": 3,
         "Singapore": 0,
         "South Korea": 1,
-        "Spain": 0,
-        "Sweden": 2,
+        "Spain": 2,
+        "Sweden": 3,
         "Switzerland": 1,
         "United Kingdom": 1,
         "United States": 1
       },
       "centroids": [
         [
-          0.07974887304099887,
-          0.07027583583489785,
-          0.07392694873828559,
-          0.07595162637948594,
-          0.07997978668933414,
-          0.07832880987998068,
-          0.07739400003792785,
-          0.09079926241495517,
-          0.09253725016426104,
-          0.08458913545706959,
-          0.09028165887472545,
-          0.10618681248807782
+          0.08089595379121142,
+          0.07110763040024647,
+          0.0749328846038516,
+          0.07636632600384995,
+          0.08243640353198081,
+          0.07982822221516672,
+          0.07463185015069361,
+          0.08531622140613664,
+          0.09185431343566153,
+          0.08482704041975492,
+          0.08968239689276,
+          0.10812075714868633
         ],
         [
-          0.10930554709071882,
-          0.11058852939444681,
-          0.10165723712549984,
-          0.0744212375924145,
-          0.0477905743153554,
-          0.05295762542908114,
-          0.11150789674574947,
-          0.09574642815454049,
-          0.05895727214409895,
-          0.0608517886859968,
-          0.07849021286969672,
-          0.09772565045240104
+          0.11010574013188365,
+          0.11218174704972718,
+          0.10340367055459353,
+          0.07455207834991778,
+          0.04896433954101176,
+          0.053498861737939274,
+          0.11231142937162922,
+          0.08766198030354382,
+          0.05964732947047112,
+          0.062111293586609814,
+          0.07952904611568754,
+          0.09603248378698534
+        ],
+        [
+          0.07747646888087242,
+          0.06886221337645645,
+          0.06294315213334992,
+          0.07025127503420824,
+          0.030331301571505574,
+          0.04669942364307335,
+          0.1119334908985363,
+          0.21862171911929346,
+          0.07443919227101214,
+          0.058102168594767176,
+          0.07951859684040304,
+          0.10082099763652196
         ],
         [
           0.17252341838130375,
@@ -848,8 +910,7 @@
           "Maldives",
           "New Zealand",
           "Pakistan",
-          "Singapore",
-          "Spain"
+          "Singapore"
         ],
         "1": [
           "Austria",
@@ -860,7 +921,6 @@
           "France",
           "Germany",
           "Israel",
-          "Italy",
           "Netherlands",
           "Norway",
           "South Korea",
@@ -869,16 +929,20 @@
           "United States"
         ],
         "2": [
+          "Italy",
+          "Spain"
+        ],
+        "3": [
           "Czech Republic",
           "Poland",
           "Russian Federation",
           "Sweden"
         ]
       },
-      "k": 3,
+      "k": 4,
       "summary": [
         {
-          "average_arrivals": 89643.9,
+          "average_arrivals": 94489.0,
           "cluster": 0,
           "countries": [
             "Australia",
@@ -889,14 +953,13 @@
             "Maldives",
             "New Zealand",
             "Pakistan",
-            "Singapore",
-            "Spain"
+            "Singapore"
           ],
-          "num_countries": 10,
-          "total_arrivals": 896439
+          "num_countries": 9,
+          "total_arrivals": 850401
         },
         {
-          "average_arrivals": 64537.13333333333,
+          "average_arrivals": 65544.78571428571,
           "cluster": 1,
           "countries": [
             "Austria",
@@ -907,7 +970,6 @@
             "France",
             "Germany",
             "Israel",
-            "Italy",
             "Netherlands",
             "Norway",
             "South Korea",
@@ -915,12 +977,22 @@
             "United Kingdom",
             "United States"
           ],
-          "num_countries": 15,
-          "total_arrivals": 968057
+          "num_countries": 14,
+          "total_arrivals": 917627
+        },
+        {
+          "average_arrivals": 48234.0,
+          "cluster": 2,
+          "countries": [
+            "Italy",
+            "Spain"
+          ],
+          "num_countries": 2,
+          "total_arrivals": 96468
         },
         {
           "average_arrivals": 67628.5,
-          "cluster": 2,
+          "cluster": 3,
           "countries": [
             "Czech Republic",
             "Poland",

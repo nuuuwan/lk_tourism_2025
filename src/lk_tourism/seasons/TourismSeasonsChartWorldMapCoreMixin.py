@@ -21,8 +21,7 @@ class TourismSeasonsChartWorldMapCoreMixin:
         fig.add_trace(
             go.Choropleth(
                 locations=[
-                    self._country_name_for_plotly(c)
-                    for c in cluster_countries
+                    self._country_name_for_plotly(c) for c in cluster_countries
                 ],
                 z=[1] * len(cluster_countries),
                 locationmode="country names",
@@ -51,9 +50,7 @@ class TourismSeasonsChartWorldMapCoreMixin:
             )
         )
 
-    def _world_map_cluster_countries(
-        self, countries, assignments, cluster_id
-    ):
+    def _world_map_cluster_countries(self, countries, assignments, cluster_id):
         return [
             country
             for country in countries

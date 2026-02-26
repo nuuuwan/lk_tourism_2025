@@ -1,1 +1,10 @@
 utils-nuuuwan
+numpy
+scipy
+matplotlib
+seaborn
+scikit-learn
+plotly
+kaleido
+pandas
+openpyxl

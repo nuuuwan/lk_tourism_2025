@@ -143,7 +143,7 @@ The popular narrative of a single November-to-March season is a reasonable first
 The reality is a mosaic:
 
 | Cluster | Character | Share | Peak |
-|||||
+|--:|:--|--:|:--|
 | 0 | Diaspora & neighbours | 38.4% | Nearly flat; small Dec uplift |
 | 1 | Classic western markets | 39.6% | Double peak: Jan–Feb and Jul–Aug |
 | 2 | European summer | 8.2% | Strongly Jul–Aug |

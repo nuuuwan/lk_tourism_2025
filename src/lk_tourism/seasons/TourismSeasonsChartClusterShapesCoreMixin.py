@@ -7,9 +7,7 @@ class TourismSeasonsChartClusterShapesCoreMixin:
 
     def _annotate_centroid_extrema(self, axis, centroid, color):
         top_index = max(range(len(centroid)), key=lambda idx: centroid[idx])
-        bottom_index = min(
-            range(len(centroid)), key=lambda idx: centroid[idx]
-        )
+        bottom_index = min(range(len(centroid)), key=lambda idx: centroid[idx])
 
         if top_index == bottom_index:
             value = centroid[top_index]

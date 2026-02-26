@@ -21,23 +21,28 @@ class TourismSeasonsDataTsvMixin:
                     rows.append(parsed)
         return rows
 
-    def _build_shape_vectors(self, rows):
-        eligible = [
+    def _eligible_rows(self, rows):
+        total_arrivals = sum(r["total"] for r in rows if r["total"] > 0)
+        if total_arrivals <= 0:
+            return []
+        min_total_arrivals = (
+            total_arrivals * self.min_arrivals_percentage / 100.0
+        )
+        return [
             r
             for r in rows
-            if r["total"] >= self.min_annual_arrivals and r["total"] > 0
+            if r["total"] >= min_total_arrivals and r["total"] > 0
         ]
+
+    def _build_shape_vectors(self, rows):
+        eligible = self._eligible_rows(rows)
         return {
             r["country"]: [m / r["total"] for m in r["monthly"]]
             for r in eligible
         }
 
     def _build_annual_totals(self, rows):
-        eligible = [
-            r
-            for r in rows
-            if r["total"] >= self.min_annual_arrivals and r["total"] > 0
-        ]
+        eligible = self._eligible_rows(rows)
         return {r["country"]: r["total"] for r in eligible}
 
     def _build_monthly_totals(self, rows):

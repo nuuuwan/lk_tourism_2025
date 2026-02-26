@@ -57,9 +57,9 @@ class TourismSeasonsChartUtilsMixin:
     ):
         filter_text = "All countries included"
         if include_filter:
-            filter_k = self._format_arrivals_k(self.min_annual_arrivals)
             filter_text = (
-                f"Includes countries with at least {filter_k} arrivals/year"
+                "Includes countries with at least "
+                f"{self.min_arrivals_percentage:.2f}% of total arrivals"
             )
         figure.text(
             0.01,

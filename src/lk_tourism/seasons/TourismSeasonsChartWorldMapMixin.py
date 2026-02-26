@@ -5,14 +5,13 @@ import plotly.graph_objects as go
 
 class TourismSeasonsChartWorldMapMixin:
     def _world_map_annotation(self):
-        arrivals_min = self._format_arrivals_k(self.min_annual_arrivals)
         return {
             "text": (
                 f"Data Source: {self.data_source} | "
                 f"Analysis: {self.analysis_by} | "
                 f"Year: {self.data_year} | "
                 "Includes countries with at least "
-                f"{arrivals_min} arrivals/year"
+                f"{self.min_arrivals_percentage:.2f}% of total arrivals"
             ),
             "x": 0,
             "y": 0,

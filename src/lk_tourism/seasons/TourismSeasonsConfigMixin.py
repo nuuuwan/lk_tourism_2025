@@ -6,7 +6,7 @@ class TourismSeasonsConfigMixin:
         self,
         analysis_years=None,
         n_clusters=None,
-        min_annual_arrivals=None,
+        min_arrivals_percentage=None,
         cluster_random_seed=None,
     ):
         self._init_paths()
@@ -15,7 +15,7 @@ class TourismSeasonsConfigMixin:
         self._apply_parameter_overrides(
             analysis_years=analysis_years,
             n_clusters=n_clusters,
-            min_annual_arrivals=min_annual_arrivals,
+            min_arrivals_percentage=min_arrivals_percentage,
             cluster_random_seed=cluster_random_seed,
         )
         self._init_metadata()
@@ -32,7 +32,7 @@ class TourismSeasonsConfigMixin:
         self,
         analysis_years,
         n_clusters,
-        min_annual_arrivals,
+        min_arrivals_percentage,
         cluster_random_seed,
     ):
         if analysis_years is not None:
@@ -41,8 +41,8 @@ class TourismSeasonsConfigMixin:
             )
         if n_clusters is not None:
             self.n_clusters = int(n_clusters)
-        if min_annual_arrivals is not None:
-            self.min_annual_arrivals = int(min_annual_arrivals)
+        if min_arrivals_percentage is not None:
+            self.min_arrivals_percentage = float(min_arrivals_percentage)
         if cluster_random_seed is not None:
             self.cluster_random_seed = int(cluster_random_seed)
 
@@ -69,7 +69,7 @@ class TourismSeasonsConfigMixin:
         ]
 
     def _init_parameters(self):
-        self.min_annual_arrivals = 20_000
+        self.min_arrivals_percentage = 0.5
         self.n_clusters = 4
         self.cluster_random_seed = 0
         self.uniform_monthly_share = 1.0 / 12.0

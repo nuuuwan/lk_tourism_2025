@@ -64,13 +64,13 @@ class TourismSeasons(
         self,
         analysis_years=None,
         n_clusters=None,
-        min_annual_arrivals=None,
+        min_arrivals_percentage=None,
         cluster_random_seed=None,
     ):
         TourismSeasonsConfigMixin.__init__(
             self,
             analysis_years=analysis_years,
             n_clusters=n_clusters,
-            min_annual_arrivals=min_annual_arrivals,
+            min_arrivals_percentage=min_arrivals_percentage,
             cluster_random_seed=cluster_random_seed,
         )

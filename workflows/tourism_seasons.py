@@ -23,9 +23,9 @@ def _parse_args():
         help="Number of k-means clusters",
     )
     parser.add_argument(
-        "--min-annual-arrivals",
-        type=int,
-        help="Annual arrivals cutoff for country filtering",
+        "--min-arrivals-percentage",
+        type=float,
+        help="Minimum percentage of total arrivals for country filtering",
     )
     parser.add_argument(
         "--cluster-random-seed",
@@ -42,6 +42,6 @@ if __name__ == "__main__":
     TourismSeasons(
         analysis_years=args.analysis_years,
         n_clusters=args.n_clusters,
-        min_annual_arrivals=args.min_annual_arrivals,
+        min_arrivals_percentage=args.min_arrivals_percentage,
         cluster_random_seed=args.cluster_random_seed,
     ).run_tourism_seasons_workflow(print_json=True)

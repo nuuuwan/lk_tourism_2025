@@ -1,3 +1,5 @@
+import warnings
+
 import numpy as np
 
 
@@ -9,6 +11,11 @@ class TourismSeasonsChartHeatmapCoreMixin:
         assignments,
         k,
     ):
+        warnings.warn(
+            "Heatmap chart helpers are deprecated and will be removed in a future release.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
         rows = []
         labels = []
         cluster_break_lines = []
@@ -34,6 +41,11 @@ class TourismSeasonsChartHeatmapCoreMixin:
         return np.array(rows, dtype=float), labels, cluster_break_lines
 
     def _apply_heatmap_axis_format(self, axis, break_lines):
+        warnings.warn(
+            "Heatmap chart helpers are deprecated and will be removed in a future release.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
         for break_line in break_lines:
             axis.hlines(
                 break_line,

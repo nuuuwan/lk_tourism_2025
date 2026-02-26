@@ -13,10 +13,6 @@ from .TourismSeasonsChartClusterShapesCoreMixin import (
 from .TourismSeasonsChartClusterShapesMixin import (
     TourismSeasonsChartClusterShapesMixin,
 )
-from .TourismSeasonsChartHeatmapCoreMixin import (
-    TourismSeasonsChartHeatmapCoreMixin,
-)
-from .TourismSeasonsChartHeatmapMixin import TourismSeasonsChartHeatmapMixin
 from .TourismSeasonsChartTotalArrivalsByMonthMixin import (
     TourismSeasonsChartTotalArrivalsByMonthMixin,
 )
@@ -49,8 +45,6 @@ class TourismSeasons(
     TourismSeasonsChartClusterShapesCoreMixin,
     TourismSeasonsChartClusterShapesMixin,
     TourismSeasonsChartCentroidsMixin,
-    TourismSeasonsChartHeatmapCoreMixin,
-    TourismSeasonsChartHeatmapMixin,
     TourismSeasonsChartTotalArrivalsByMonthMixin,
     TourismSeasonsChartClusterArrivalsByYearCoreMixin,
     TourismSeasonsChartClusterArrivalsByYearMixin,

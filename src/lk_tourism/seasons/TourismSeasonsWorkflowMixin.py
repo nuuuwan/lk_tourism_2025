@@ -33,7 +33,6 @@ class TourismSeasonsWorkflowMixin:
             shape_vectors, annual_totals, cluster_result
         )
         self.save_chart_centroids(cluster_result, yearly_cluster_results)
-        self.save_chart_heatmap(shape_vectors, annual_totals, cluster_result)
         self.save_chart_world_map(cluster_result)
         self.save_chart_total_arrivals_by_month(monthly_totals)
 

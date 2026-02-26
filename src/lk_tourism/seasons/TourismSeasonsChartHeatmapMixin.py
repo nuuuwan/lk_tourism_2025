@@ -1,4 +1,5 @@
 import os
+import warnings
 
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
@@ -14,6 +15,11 @@ class TourismSeasonsChartHeatmapMixin:
         cluster_result,
         output_path,
     ):
+        warnings.warn(
+            "Heatmap chart generation is deprecated and will be removed in a future release.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
         assignments = cluster_result["assignments"]
         matrix, labels, break_lines = self._heatmap_rows_with_cluster_gaps(
             shape_vectors,
@@ -43,6 +49,11 @@ class TourismSeasonsChartHeatmapMixin:
         plt.close(figure)
 
     def save_chart_heatmap(self, shape_vectors, annual_totals, cluster_result):
+        warnings.warn(
+            "save_chart_heatmap is deprecated and no longer used by the default workflow.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
         self._plot_shape_heatmap(
             shape_vectors,
             annual_totals,

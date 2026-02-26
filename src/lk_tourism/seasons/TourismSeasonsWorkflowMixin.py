@@ -1,10 +1,20 @@
 import json
 import os
+import shutil
 
 import seaborn as sns
 
 
 class TourismSeasonsWorkflowMixin:
+    def _clear_images_dir(self):
+        if not os.path.exists(self.images_dir):
+            return
+        for entry in os.scandir(self.images_dir):
+            if entry.is_file() or entry.is_symlink():
+                os.unlink(entry.path)
+            elif entry.is_dir():
+                shutil.rmtree(entry.path)
+
     def save_shape_visualizations(
         self,
         shape_vectors,
@@ -41,6 +51,7 @@ class TourismSeasonsWorkflowMixin:
         return results
 
     def run_tourism_seasons_workflow(self, print_json=True):
+        self._clear_images_dir()
         aggregated_path, year_totals, yearly_paths = (
             self.build_aggregated_tsv_from_excels()
         )

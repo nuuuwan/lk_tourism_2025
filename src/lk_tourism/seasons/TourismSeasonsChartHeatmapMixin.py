@@ -23,7 +23,7 @@ class TourismSeasonsChartHeatmapMixin:
         )
         mask = np.isnan(matrix)
 
-        figure, axis = plt.subplots(figsize=(12, max(4, len(labels) * 0.35)))
+        figure, axis = plt.subplots(figsize=(16, 9))
         sns.heatmap(
             matrix,
             cmap="Reds",
@@ -42,9 +42,7 @@ class TourismSeasonsChartHeatmapMixin:
         figure.savefig(output_path, dpi=220)
         plt.close(figure)
 
-    def save_chart_heatmap(
-        self, shape_vectors, annual_totals, cluster_result
-    ):
+    def save_chart_heatmap(self, shape_vectors, annual_totals, cluster_result):
         self._plot_shape_heatmap(
             shape_vectors,
             annual_totals,

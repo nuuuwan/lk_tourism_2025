@@ -56,7 +56,7 @@ class TourismSeasonsChartWorldMapMixin:
             cluster_result["k"],
         )
         self._apply_world_map_layout(figure)
-        figure.write_image(output_path, width=1400, height=800, scale=2)
+        figure.write_image(output_path, width=1600, height=900, scale=2)
 
     def save_chart_world_map(self, cluster_result):
         self._plot_cluster_world_map(

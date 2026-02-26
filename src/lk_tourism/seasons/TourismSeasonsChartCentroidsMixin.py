@@ -32,7 +32,7 @@ class TourismSeasonsChartCentroidsMixin:
             for cluster_id in range(k)
         ]
 
-        figure, axis = plt.subplots(figsize=(12, 6))
+        figure, axis = plt.subplots(figsize=(16, 9))
         axis.stackplot(
             x_positions,
             *centroids,

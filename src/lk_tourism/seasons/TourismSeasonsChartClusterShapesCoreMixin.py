@@ -2,6 +2,56 @@ import matplotlib.ticker as mtick
 
 
 class TourismSeasonsChartClusterShapesCoreMixin:
+    def _format_share_pct(self, value):
+        return f"{value * 100:.1f}%"
+
+    def _annotate_centroid_extrema(self, axis, centroid, color):
+        top_index = max(range(len(centroid)), key=lambda idx: centroid[idx])
+        bottom_index = min(
+            range(len(centroid)), key=lambda idx: centroid[idx]
+        )
+
+        if top_index == bottom_index:
+            value = centroid[top_index]
+            axis.annotate(
+                (
+                    f"Top/Bottom: {self.months[top_index]} "
+                    f"({self._format_share_pct(value)})"
+                ),
+                xy=(self.months[top_index], value),
+                xytext=(12, 14),
+                textcoords="offset points",
+                fontsize=10,
+                color=color,
+                fontweight="bold",
+            )
+            return
+
+        top_value = centroid[top_index]
+        axis.annotate(
+            f"Top: {self.months[top_index]} ({self._format_share_pct(top_value)})",
+            xy=(self.months[top_index], top_value),
+            xytext=(12, 14),
+            textcoords="offset points",
+            fontsize=10,
+            color=color,
+            fontweight="bold",
+        )
+
+        bottom_value = centroid[bottom_index]
+        axis.annotate(
+            (
+                f"Bottom: {self.months[bottom_index]} "
+                f"({self._format_share_pct(bottom_value)})"
+            ),
+            xy=(self.months[bottom_index], bottom_value),
+            xytext=(12, -16),
+            textcoords="offset points",
+            fontsize=10,
+            color=color,
+            fontweight="bold",
+        )
+
     def _country_linewidth(self, country, countries, annual_totals):
         cluster_arrivals = [annual_totals[name] for name in countries]
         min_arrivals = min(cluster_arrivals)
@@ -56,6 +106,7 @@ class TourismSeasonsChartClusterShapesCoreMixin:
             linewidth=1.5,
             label="Uniform monthly share (8.33%)",
         )
+        self._annotate_centroid_extrema(axis, centroid, color)
 
     def _style_cluster_shape_axis(self, axis, cluster_label):
         axis.set_title(

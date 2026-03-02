@@ -51,7 +51,13 @@ def build_figure(data):
     me_arrivals = sum(
         d["Number of tourists"] for d in data if _is_middle_east(d)
     )
-    me_ports = sorted([f"{d['Final Port by Air']} ({d['IATA']})" for d in data if _is_middle_east(d)])
+    me_ports = sorted(
+        [
+            f"{d['Final Port by Air']} ({d['IATA']})"
+            for d in data
+            if _is_middle_east(d)
+        ]
+    )
     me_pct = 100 * me_arrivals / total_arrivals
 
     # Scale so that the largest circle has a reference size of 200 (area units).
